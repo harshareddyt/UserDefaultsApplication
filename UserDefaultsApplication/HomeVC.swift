@@ -21,31 +21,13 @@ class HomeVC: UIViewController {
     }
     
     @IBAction func logoutButton(_ sender: UIButton) {
-        
-        
         myhomedict = defaults.value(forKey: "UserDetails") as! [String : String]
         
-        //      myhomedict.remove(at:homeEmail)
         myhomedict.removeValue(forKey: homeEmail)
         defaults.set(myhomedict, forKey: "UserDetails")
-        
-        
-        
-        
-        
-        
         
         let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "ViewController") as? ViewController
         self.navigationController?.pushViewController(vc!, animated: true)
         
-        
-        //        let defaults = UserDefaults.standard
-        //        defaults.removeObject(forKey: "userEmail")
-        //        defaults.removeObject(forKey: "userPassword")
-        
-        //        dict.removeValueForKey("name")
-        
     }
-    
-    
 }
