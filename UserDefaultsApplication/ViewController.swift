@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var InvalidEandP: UILabel!
     var userEmail = String()
     var userPassword = String()
+    var userMobileNumber = Int()
     var defaults = UserDefaults.standard
     var myuserdict = [String: String]()
     var emailText = ""
@@ -29,24 +30,25 @@ class ViewController: UIViewController {
         
 //        self.emailText = emailTextLogin.text!
 //        self.passwordText = passwordTextLogin.text!
-    
         
-        
+        var userEmailid = emailTextLogin.text
         var userEmail = emailTextLogin.text
+        var userMobileNumber = emailTextLogin.text!
         var userPassword  = passwordTextLogin.text
         
-    
+        
         let isUserDefaultsExists = isKeyPresentInUserDefaults(key: "UserDetails")
         if isUserDefaultsExists {
             myuserdict = defaults.value(forKey: "UserDetails") as! [String : String]
             let keyExists = myuserdict[userEmail!] != nil
-            
-            if keyExists == true{
+            let keyExistss = myuserdict[userMobileNumber] != nil
+            print(keyExists)
+            print(keyExistss)
+            if (keyExists == true) && (keyExistss == true){
                 let password = myuserdict[userEmail!]
                 if userPassword == password{
-                    let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "HomeVC") as? HomeVC
-                    vc?.homeEmail = userEmail!
-                    vc?.homePassword = userPassword!
+                    UserDefaults.standard.set(userEmailid, forKey: "UserEmailID")
+                    let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "TabBar") as? TabBar
                     self.navigationController?.pushViewController(vc!, animated: true)
                 }else{
                     InvalidEandP.text = "Invalid Email and Password (Please Register)"
@@ -122,6 +124,7 @@ class ViewController: UIViewController {
         
         let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "RegistrationVC") as? RegistrationVC
         self.navigationController?.pushViewController(vc!, animated: true)
+        
     }
     
     

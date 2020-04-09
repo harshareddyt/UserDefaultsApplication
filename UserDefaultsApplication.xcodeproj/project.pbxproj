@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D2C8857243C56040011C984 /* logout.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D2C8856243C56040011C984 /* logout.png */; };
+		9D2C885B243C56EE0011C984 /* frame.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D2C885A243C56EE0011C984 /* frame.png */; };
+		9D2C885D243C586A0011C984 /* gmail.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D2C885C243C586A0011C984 /* gmail.png */; };
+		9D2C885F243C58D10011C984 /* telephone.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D2C885E243C58D10011C984 /* telephone.png */; };
+		9D2C8861243C5C800011C984 /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2C8860243C5C800011C984 /* AccountsViewController.swift */; };
+		9D6C8EA3243B1A9600F4CC08 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6C8EA2243B1A9600F4CC08 /* TabBar.swift */; };
 		9D97AFCA2437057A008FB5F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D97AFC92437057A008FB5F8 /* AppDelegate.swift */; };
 		9D97AFCC2437057A008FB5F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D97AFCB2437057A008FB5F8 /* SceneDelegate.swift */; };
 		9D97AFCE2437057A008FB5F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D97AFCD2437057A008FB5F8 /* ViewController.swift */; };
@@ -17,6 +23,8 @@
 		9D97AFEC2437057C008FB5F8 /* UserDefaultsApplicationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D97AFEB2437057C008FB5F8 /* UserDefaultsApplicationUITests.swift */; };
 		9D97AFFA24370968008FB5F8 /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D97AFF924370968008FB5F8 /* RegistrationVC.swift */; };
 		9D97AFFC24370DA9008FB5F8 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D97AFFB24370DA9008FB5F8 /* HomeVC.swift */; };
+		9DF05E06243C45B100560C00 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF05E05243C45B100560C00 /* CategoriesViewController.swift */; };
+		9DF05E08243C469900560C00 /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF05E07243C469900560C00 /* CategoriesCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +45,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9D2C8856243C56040011C984 /* logout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logout.png; path = ../../../../Downloads/logout.png; sourceTree = "<group>"; };
+		9D2C885A243C56EE0011C984 /* frame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = frame.png; path = ../../../../Downloads/frame.png; sourceTree = "<group>"; };
+		9D2C885C243C586A0011C984 /* gmail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gmail.png; path = ../../../../Downloads/gmail.png; sourceTree = "<group>"; };
+		9D2C885E243C58D10011C984 /* telephone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = telephone.png; path = ../../../../Downloads/telephone.png; sourceTree = "<group>"; };
+		9D2C8860243C5C800011C984 /* AccountsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsViewController.swift; sourceTree = "<group>"; };
+		9D6C8EA2243B1A9600F4CC08 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		9D97AFC62437057A008FB5F8 /* UserDefaultsApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserDefaultsApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D97AFC92437057A008FB5F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D97AFCB2437057A008FB5F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +67,8 @@
 		9D97AFED2437057C008FB5F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D97AFF924370968008FB5F8 /* RegistrationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationVC.swift; sourceTree = "<group>"; };
 		9D97AFFB24370DA9008FB5F8 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		9DF05E05243C45B100560C00 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
+		9DF05E07243C469900560C00 /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,11 +123,19 @@
 				9D97AFCB2437057A008FB5F8 /* SceneDelegate.swift */,
 				9D97AFCD2437057A008FB5F8 /* ViewController.swift */,
 				9D97AFCF2437057A008FB5F8 /* Main.storyboard */,
+				9DF05E05243C45B100560C00 /* CategoriesViewController.swift */,
+				9DF05E07243C469900560C00 /* CategoriesCollectionViewCell.swift */,
+				9D6C8EA2243B1A9600F4CC08 /* TabBar.swift */,
 				9D97AFFB24370DA9008FB5F8 /* HomeVC.swift */,
+				9D2C8860243C5C800011C984 /* AccountsViewController.swift */,
 				9D97AFF924370968008FB5F8 /* RegistrationVC.swift */,
 				9D97AFD22437057B008FB5F8 /* Assets.xcassets */,
 				9D97AFD42437057B008FB5F8 /* LaunchScreen.storyboard */,
 				9D97AFD72437057B008FB5F8 /* Info.plist */,
+				9D2C8856243C56040011C984 /* logout.png */,
+				9D2C885E243C58D10011C984 /* telephone.png */,
+				9D2C885C243C586A0011C984 /* gmail.png */,
+				9D2C885A243C56EE0011C984 /* frame.png */,
 			);
 			path = UserDefaultsApplication;
 			sourceTree = "<group>";
@@ -238,9 +262,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D2C885F243C58D10011C984 /* telephone.png in Resources */,
+				9D2C885D243C586A0011C984 /* gmail.png in Resources */,
 				9D97AFD62437057B008FB5F8 /* LaunchScreen.storyboard in Resources */,
 				9D97AFD32437057B008FB5F8 /* Assets.xcassets in Resources */,
 				9D97AFD12437057A008FB5F8 /* Main.storyboard in Resources */,
+				9D2C885B243C56EE0011C984 /* frame.png in Resources */,
+				9D2C8857243C56040011C984 /* logout.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,8 +295,12 @@
 			files = (
 				9D97AFCE2437057A008FB5F8 /* ViewController.swift in Sources */,
 				9D97AFFC24370DA9008FB5F8 /* HomeVC.swift in Sources */,
+				9DF05E08243C469900560C00 /* CategoriesCollectionViewCell.swift in Sources */,
 				9D97AFCA2437057A008FB5F8 /* AppDelegate.swift in Sources */,
+				9D6C8EA3243B1A9600F4CC08 /* TabBar.swift in Sources */,
 				9D97AFCC2437057A008FB5F8 /* SceneDelegate.swift in Sources */,
+				9DF05E06243C45B100560C00 /* CategoriesViewController.swift in Sources */,
+				9D2C8861243C5C800011C984 /* AccountsViewController.swift in Sources */,
 				9D97AFFA24370968008FB5F8 /* RegistrationVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

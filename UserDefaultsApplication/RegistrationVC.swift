@@ -11,14 +11,17 @@ import UIKit
 class RegistrationVC: UIViewController {
     
     @IBOutlet weak var emailText: UITextField!
+    @IBOutlet weak var mobileNumberText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
     @IBOutlet weak var rePasswordText: UITextField!
     @IBOutlet weak var passwordMatchLabel: UILabel!
+    
     
     var defaults = UserDefaults.standard
     var userPassword = String()
     var userRePassword = String()
     var userEmail = String()
+    var userMobileNumber = Int()
     var mydict = [String: String]()
     
     override func viewDidLoad() {
@@ -33,13 +36,14 @@ class RegistrationVC: UIViewController {
         
         var userEmail = emailText.text;
         var userPassword = passwordText.text;
+        var userMobileNumber = mobileNumberText.text;
         var userRePassword = rePasswordText.text;
         
         
         let email  = isValidEmail(userEmail!)
         let password = isValidPassword(userPassword!)
         
-        if(userEmail!.isEmpty || userPassword!.isEmpty || userRePassword!.isEmpty){
+        if(userEmail!.isEmpty || userMobileNumber!.isEmpty || userPassword!.isEmpty || userRePassword!.isEmpty){
             passwordMatchLabel.text = "Please fill all the Fields "
         }else if email == false{
             let alert = UIAlertController(title: "Invalid Email Address", message: "", preferredStyle: UIAlertController.Style.alert)
@@ -69,21 +73,27 @@ class RegistrationVC: UIViewController {
                     keyExists = mydict[userEmail!] != nil
                 }
                 
+                var keyExistss = false
+                if isUserDefaultsExists {
+                    mydict = defaults.value(forKey: "UserDetails") as! [String : String]
+                    keyExistss = mydict[userMobileNumber!] != nil
+                }
                 
-                if(keyExists == false){
-                    mydict[userEmail!] = userPassword
-                    defaults.set(mydict, forKey: "UserDetails")
-                    
-                    let alert = UIAlertController(title: "SuccesFully Registerd", message: "", preferredStyle: UIAlertController.Style.alert)
-                    // add the actions (buttons)
-                    let okAction = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default){action in
-                        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as! ViewController
-                        self.present(vc, animated: true, completion: nil)
-                    }
-                    alert.addAction(okAction)
-                    self.present(alert, animated: true, completion: nil)
-                    
-                }else{
+                if(keyExistss == false) && (keyExists == false) {
+                                   mydict[userEmail!] = userPassword
+                                   mydict[userMobileNumber!] = userPassword
+                                   defaults.set(mydict, forKey: "UserDetails")
+                                   
+                                   let alert = UIAlertController(title: "SuccesFully Registerd", message: "", preferredStyle: UIAlertController.Style.alert)
+                                   // add the actions (buttons)
+                                   let okAction = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default){action in
+                                       let vc = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+                                       self.present(vc, animated: true, completion: nil)
+                                   }
+                                   alert.addAction(okAction)
+                                   self.present(alert, animated: true, completion: nil)
+                                   
+                               }else{
                     
                     let alert = UIAlertController(title: "This Email already Exits", message: "", preferredStyle: UIAlertController.Style.alert)
                     // add the actions (buttons)
